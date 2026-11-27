@@ -1,60 +1,58 @@
 # emojify-kit
 
-Apne text mein **:naam:** likho, to uski jagah emoji aa jayega.
-Jaise `:earth:` likhoge to 🌍 aayega.
+Write **:name:** in your text and it will be replaced with an emoji.
+For example, `:earth:` becomes 🌍.
 
 ---
 
-## 1. Install kaise karein
+## 1. Install
 
-Terminal (Command Prompt / PowerShell / Terminal) kholo aur ye command chalao:
+Open your terminal (Command Prompt, PowerShell, or Terminal) and run:
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/emojify-kit.git
+pip install git+https://github.com/Mehul0002/emojify-kit.git
 ```
-
-> `YOUR_USERNAME` ki jagah apna GitHub username likho.
 
 ---
 
-## 2. Code mein kaise use karein
+## 2. Use it in your code
 
-Apni Python file mein sabse upar ye line likho:
+Add this line at the top of your Python file:
 
 ```python
 from emojify_kit import emojify
 ```
 
-Phir jahan bhi text mein emoji chahiye, wahan `emojify()` ke andar text do:
+Then pass your text to `emojify()` wherever you want emojis:
 
 ```python
 from emojify_kit import emojify
 
-print(emojify("Aaj mai :earth: dekh raha hoon"))
+print(emojify("Look at the earth :earth:"))
 ```
 
 Output:
 ```
-Aaj mai 🌍 dekh raha hoon
+Look at the earth 🌍
 ```
 
 ---
 
-## 3. Kaun sa syntax kya karta hai
+## 3. What each syntax does
 
-| Aap likhoge | Output |
+| You write | Output |
 |---|---|
 | `:earth:` | 🌍 |
-| `:hasi:` | 😂 |
+| `:laugh:` | 😂 |
 | `happy` (plain word) | `happy 😀` |
 
-Ek aur example:
+More examples:
 
 ```python
 from emojify_kit import emojify
 
-print(emojify("Aaj mai :hasi: kar raha hoon"))
-# Aaj mai 😂 kar raha hoon
+print(emojify("That was so funny :laugh:"))
+# That was so funny 😂
 
 print(emojify("I am happy today"))
 # I am happy 😀 today
@@ -62,7 +60,7 @@ print(emojify("I am happy today"))
 
 ---
 
-## 4. Apna khud ka emoji add karna (optional)
+## 4. Add your own emoji (optional)
 
 ```python
 from emojify_kit import add_emoji, emojify
@@ -74,38 +72,38 @@ print(emojify("I love :python:"))
 
 ---
 
-## 5. Terminal se seedha chalana
+## 5. Run from the terminal
 
 ```bash
-python -m emojify_kit "Aaj mai :earth: dekh raha hoon"
+python -m emojify_kit "Look at the earth :earth:"
 ```
 
 Output:
 ```
-Aaj mai 🌍 dekh raha hoon
+Look at the earth 🌍
 ```
 
 ---
 
 ## Common problems
 
-**Emoji ki jagah `:earth:` hi dikh raha hai**
-Us naam ka emoji list mein nahi hai. `emojify_kit/core.py` kholo aur `EMOJI_MAP` mein wo naam add karo.
+**The emoji is not shown, and `:earth:` appears as plain text**
+That name is not in the emoji list. Open `emojify_kit/core.py`, find `EMOJI_MAP`, and add the name there.
 
-**Windows par emoji square box (□) ya `?` dikh raha hai**
-Terminal mein ye command chalao, phir dobara run karo:
+**On Windows, emojis show as squares (□) or question marks (?)**
+Run this command in the terminal, then run your program again:
 ```bash
 chcp 65001
 ```
 
-**`pip` command nahi mil rahi**
-`pip3` try karo, ya Python sahi se install hai ya nahi check karo.
+**The `pip` command is not found**
+Try `pip3` instead, and check that Python is installed correctly.
 
 ---
 
-## Kisi bhi naye project mein use karne ke steps (short mein)
+## Quick steps for any new project
 
-1. Terminal mein `pip install git+https://github.com/YOUR_USERNAME/emojify-kit.git` chalao.
-2. Apni Python file mein `from emojify_kit import emojify` likho.
-3. Text ke andar `:naam:` likho aur `emojify("...")` mein pass karo.
-4. File run karo: `python apni_file.py`
+1. Run `pip install git+https://github.com/Mehul0002/emojify-kit.git` in the terminal.
+2. Add `from emojify_kit import emojify` to your Python file.
+3. Write `:name:` in your text and pass it to `emojify("...")`.
+4. Run your file with `python your_file.py`.
