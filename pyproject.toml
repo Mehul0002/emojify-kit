@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emojify-kit"
+version = "0.2.0"
+description = "Text mein words ya :name: ke jagah emoji lagao"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = []
+
+[tool.setuptools]
+packages = ["emojify_kit"]
